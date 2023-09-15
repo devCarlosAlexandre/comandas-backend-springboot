@@ -1,1 +1,1 @@
-web: java -jar
+web: java -jar target/jati-dev-2023-0.0.1-SNAPSHOT.jar
