@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:jati2023 # endereço do bancod de dados
+    username: jati2023 # usuario do banco de dados
+    password: # password do banco de dados
+  jpa:
+    show-sql: true # exibe as querys no console
+    #open-in-view: false # mantem a entidade do banco de dados fechada para transações por questão de segurança
+    hibernate:
+      ddl-auto: update # cria o banco de dados automaticamente e gera validate | update | create | create-drop
+    properties:
+      hibernate:
+        format_sql: true # formata as querys execultadas pelo Hibernate de forma que fique legivel
+  h2:
+    console:
+      enabled: true # habilita o console do bd para acesso com uma interface web
+      path: /h2-console # endereço de acesso ao bd em memoria
+      settings:
+        trace: false # define as operações do console não devem ser rastreiada logo não vão ser salvas em arquivos de logs
+        web-allow-others: false # controla se outros endereços podem acessar o console
